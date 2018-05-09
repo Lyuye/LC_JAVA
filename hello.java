@@ -2,6 +2,5 @@ package com.lc.lyuye;
 
 public class hello {
     public static void main(String [] args){
-        aaa_twosum.test();
     }
 }
