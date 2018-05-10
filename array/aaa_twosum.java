@@ -1,4 +1,5 @@
-package com.lc.lyuye;
+package com.lc.lyuye.array;
+
 public class aaa_twosum {
     public static int[] twoSum(int[] nums, int target) {
         int res[] = new int[2];
