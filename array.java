@@ -1,5 +1,5 @@
 package com.lc.lyuye;
-
+import java.util.Arrays;
 public class array{
     public static int[] insert (int[] array, int a, int index){
         if (index > array.length - 1) return null;
