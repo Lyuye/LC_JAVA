@@ -18,7 +18,7 @@ public class aaa_twosum {
 
     public static void test(){
         int nums[] = {2,7,11,15};
-        System.out.println(twoSum(nums, 26)[0] + " " + twoSum(nums, 26)[1]);
+//        System.out.println(twoSum(nums, 26)[0] + " " + twoSum(nums, 26)[1]);
 
     }
 }
