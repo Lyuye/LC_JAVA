@@ -1,10 +1,36 @@
 package com.lc.lyuye.array;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
+
 public class abh_LongestConsecutiveSub {
 
+    // HashSet
+    public static int solution3 (int[] nums){
 
+        Set myset = new HashSet<>();
+        int res = 0;
+        for (int i : nums){
+            myset.add(i);
+        }
+        for (int i : nums){
+            int left = i - 1;
+            int right = i + 1;
+            int count = 1; // count is not 0
+            while (myset.contains(left)){
+                count++;
+                left--;
+                myset.remove(left);
+            }
+            while (myset.contains(right)){
+                count++;
+                right++;
+                myset.remove(right);
+            }
+            res = Math.max(res, count);   
+        }
+        return res;
+    }
 
+    // HashMap
     public static int solution2 (int[] nums){
 
         HashMap <Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -23,9 +49,7 @@ public class abh_LongestConsecutiveSub {
         return res;
     }
 
-
-
-    //Sort for fun
+    // Sort for fun
     public static int solution1 (int[] nums) {
         Arrays.sort(nums);
         int res = 0, temp = 0;
